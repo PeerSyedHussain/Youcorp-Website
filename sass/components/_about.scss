@@ -1,0 +1,38 @@
+// about page scss
+.about-us{
+    .navbar{
+        z-index:2;
+    }
+    .about-banner{
+        .overlay{
+            height: 100vh;
+            background: linear-gradient(to right, #11b1a19c 0%, #f6d414c4 100%);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            &:before{
+                content: '';
+                background-image: url("../images/work-header-bottom.svg");
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+        }
+        .video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        video{
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
