@@ -23,9 +23,16 @@ function preloader(){
 function chatBtn(){
     var tl = gsap.timeline();
 
-    tl.fromTo(".chat-btn",{opacity:0}, {delay: 5, opacity: 1})
+    tl.fromTo(".chat-btn",
+        {
+            opacity:0
+        }, 
+        {
+            delay: 5,
+            opacity: 1
+        }
+    )
 }
-// gsap.fromTo("#logo", {width: 0, height: 0}, {duration: 1.5, width: 100, height: 200});
 
 function homePage(){
     var t1 = gsap.timeline();
@@ -51,7 +58,49 @@ function aboutPage(){
         {
             delay:5,
             opacity:0,
+            display:"none",
             yPercent: -100 	 
+        }
+    )
+    t1.from(".banner-next-section",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+    t1.from(".values",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+    t1.from(".people",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+    t1.from(".to-careers",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+    t1.from(".community",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+}
+
+function aboutPageSlide(){
+    var t1 = gsap.timeline();
+    var one = document.getElementByClassName(".center-img");
+    t1.from(one,
+        {
+            opacity:0,
+            xPercent : -100	
         }
     )
 }

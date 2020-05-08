@@ -6,30 +6,7 @@
         width: 100%;
         background-color: $white;
     }
-    .small-heading{
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: .125rem;
-    }
-    .btn-grad {
-        background-image: linear-gradient(to right, #11b1a2 0%, #f6d314 51%, #11b1a2 100%);
-        margin: 15px 0px;
-        padding: 10px 30px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;
-        text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        box-shadow: 0 0 20px #eee;
-        border-radius: 5px;
-        display: block;
-
-        &:hover { 
-        background-position: right center; 
-        }
-    }
-    
+ 
     .curved{
         height:100vh;
         
