@@ -94,15 +94,134 @@ function aboutPage(){
     )
 }
 
-function aboutPageSlide(){
-    var t1 = gsap.timeline();
-    var one = document.getElementByClassName(".center-img");
-    t1.from(one,
-        {
-            opacity:0,
-            xPercent : -100	
-        }
-    )
+function aboutPageSlideBannerNextSection(){
+
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('#about_center', {duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_3', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_4', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_2', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_10', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_5', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_9', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#about_8', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
+    tl.from('#abt-btn',{delay:1, duration:0.5, y:100 ,opacity:0 });
+    tl.from('.second-part .video-section',{ duration:0.5, y:100 ,opacity:0 });
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".banner-next-section",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
+    .setPin("#about_center")
+    .setPin('#about_3')
+    .setPin('#about_4')
+    .setPin('#about_2')
+    .setPin('#about_10')
+    .setPin('#about_5')
+    .setPin('#about_9')
+    .setPin('#about_8')
+    .setTween(tl)
+    .addTo(controller);
+    
+}
+
+function aboutPageSlideValuesSection(){
+
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.total-box1 .boxes', {
+            duration:0.5, 
+            y: -100 , 
+            opacity: 0,
+            stagger:0.3
+            }
+        );
+    tl.from('.total-box2 .boxes', {
+            duration:1, 
+            y: -100 , 
+            opacity: 0,
+            stagger:0.3
+            },
+        );
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".values",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
+    // .setPin(".boxes")
+    // .setPin(".total-box2")
+    .setTween(tl)
+    .addTo(controller);  
+}
+
+function aboutPageSlidePeopleSection(){
+
+    
+    
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.people-row1 .person', {
+            duration:0.5, 
+            y: -100 , 
+            opacity: 0,
+            stagger:0.3
+            }
+        );
+    tl.from('.people-row2 .person', {
+            duration:1, 
+            y: -150 , 
+            opacity: 0,
+            stagger:0.3
+            },
+        );
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".people",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
+    .setPin(".people-row1")
+    .setPin(".people-row2")
+    .setTween(tl)
+    .addTo(controller);  
+    
+}
+
+function aboutPageSlideCommunitySection(){
+
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('#community_center', {duration:1, xPercent: 100 , opacity: 0});
+    // tl.from('#about_3', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_4', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_2', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_10', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_5', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_9', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#about_8', {duration:0.5, xPercent: 100 , opacity: 0});
+    // tl.from('#abt-btn',{ duration:0.5, y:100 ,opacity:0 });
+    // tl.from('.second-part .video-section',{ duration:0.5, y:100 ,opacity:0 });
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".community",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
+    .setPin("#community_center")
+    .setTween(tl)
+    .addTo(controller);
+    
 }
 
 var master = gsap.timeline();//homepage 
@@ -116,5 +235,7 @@ var about = gsap.timeline();//about page
 about.add( preloader() )//preloader
      .add( aboutPage() )//about page
      .add( chatBtn() )//chatbtn function
-
-    
+     .add(aboutPageSlideBannerNextSection())//banner next section
+     .add(aboutPageSlideValuesSection()) //values section
+     .add(aboutPageSlidePeopleSection())//people section
+     .add(aboutPageSlideCommunitySection())//community section

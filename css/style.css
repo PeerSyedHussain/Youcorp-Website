@@ -120,6 +120,11 @@ body {
     background-position: right center;
     color: #fff; }
 
+.scrollmagic-pin-spacer {
+  padding-top: 0px !important;
+  min-height: 0px !important;
+  height: 0px !important; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -302,28 +307,34 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 100px; }
   .banner-next-section .center-img {
     position: relative; }
+    .banner-next-section .center-img img {
+      position: absolute;
+      left: 0;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important; }
   .banner-next-section .surrounded-img img {
     position: absolute; }
   .banner-next-section .about4 {
-    top: -70px;
+    bottom: -60px;
     left: -40px; }
   .banner-next-section .about3 {
-    top: -70px;
+    bottom: 0px;
     left: -35px; }
   .banner-next-section .about2 {
-    bottom: -175px;
+    top: 100px;
     left: -40px; }
   .banner-next-section .about10 {
-    top: -45px;
+    top: -270px;
     right: -120px; }
   .banner-next-section .about5 {
-    bottom: -100px;
-    right: -50px; }
+    top: 100px;
+    right: -40px; }
   .banner-next-section .about9 {
-    bottom: -135px;
+    top: -135px;
     right: 0px; }
   .banner-next-section .about8 {
-    top: -60px;
+    bottom: 170px;
     right: 140px; }
 
 .second-part {
@@ -374,7 +385,8 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent; }
 
 .people {
-  padding: 0px 0px 80px 0px; }
+  padding: 0px 0px 80px 0px;
+  margin-bottom: 100px; }
   .people h3 {
     background: -webkit-linear-gradient(#f6d314, #11b1a2);
     background-clip: border-box;
@@ -402,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
       color: #f6d314; }
 
 .to-careers {
-  padding: 80px 0px; }
+  padding: 120px 0px 80px 0px; }
   .to-careers .career-box {
     background: url("../images/globe.png") 100% no-repeat, -webkit-linear-gradient(-190deg, #6000bf 3%, #450194);
     background-size: auto, auto;
@@ -425,22 +437,28 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 100px; }
   .community .center-img {
     position: relative; }
+    .community .center-img img {
+      position: absolute;
+      left: 0 !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important; }
   .community .surrounded-img img {
     position: absolute; }
   .community .community3 {
-    bottom: -70px;
+    top: 0px;
     left: -30px; }
   .community .community2 {
-    bottom: -28px;
+    top: 0px;
     left: -20px; }
   .community .community5 {
-    top: 40px;
+    bottom: 100px;
     left: -20px; }
   .community .community6 {
-    bottom: -110px;
+    top: 200px;
     left: 175px; }
   .community .community7 {
-    top: -60px;
+    bottom: -325px;
     right: -120px; }
   .community .community8 {
     top: 0px;
