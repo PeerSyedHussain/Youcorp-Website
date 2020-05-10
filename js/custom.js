@@ -94,36 +94,47 @@ function aboutPage(){
     )
 }
 
-function aboutPageSlideBannerNextSection(){
+function aboutPageSlideBannerNextSectionFirstPart(){
 
     var tl = new TimelineMax();
         
     const controller = new ScrollMagic.Controller();
     
-    tl.from('#about_center', {duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_3', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_4', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_2', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_10', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_5', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_9', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#about_8', {delay:1,duration:0.5, xPercent: 100 , opacity: 0});
-    tl.from('#abt-btn',{delay:1, duration:0.5, y:100 ,opacity:0 });
-    tl.from('.second-part .video-section',{ duration:0.5, y:100 ,opacity:0 });
+    tl.from('#about_center', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_3', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_4', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_2', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_10', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_5', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_9', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#about_8', {duration:1, xPercent: 100 , opacity: 0});
+    tl.from('#abt-btn',{duration:1, y:100 ,opacity:0 });
+    tl.from('.second-part .video-section',{ duration:1, y:100 ,opacity:0 });
     
     const scene = new ScrollMagic.Scene({
-            triggerElement: ".banner-next-section",
+            triggerElement: ".first-part",
             triggerHook: "onEnter",
             duration: "100%"
     })
-    .setPin("#about_center")
-    .setPin('#about_3')
-    .setPin('#about_4')
-    .setPin('#about_2')
-    .setPin('#about_10')
-    .setPin('#about_5')
-    .setPin('#about_9')
-    .setPin('#about_8')
+    .setTween(tl)
+    .addTo(controller);
+    
+}
+
+function aboutPageSlideBannerNextSectionSecondPart(){
+
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    // tl.from('.second-part .second-part-img',{ duration:1, y:100 ,opacity:0 });
+    tl.from('.second-part .side-box',{ duration:1, y:100 ,opacity:0 });
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".second-part",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
     .setTween(tl)
     .addTo(controller);
     
@@ -137,14 +148,14 @@ function aboutPageSlideValuesSection(){
     
     tl.from('.total-box1 .boxes', {
             duration:0.5, 
-            y: -100 , 
+            y: 100 , 
             opacity: 0,
             stagger:0.3
             }
         );
     tl.from('.total-box2 .boxes', {
             duration:1, 
-            y: -100 , 
+            y: 100 , 
             opacity: 0,
             stagger:0.3
             },
@@ -155,8 +166,6 @@ function aboutPageSlideValuesSection(){
             triggerHook: "onEnter",
             duration: "100%"
     })
-    // .setPin(".boxes")
-    // .setPin(".total-box2")
     .setTween(tl)
     .addTo(controller);  
 }
@@ -170,29 +179,46 @@ function aboutPageSlidePeopleSection(){
     const controller = new ScrollMagic.Controller();
     
     tl.from('.people-row1 .person', {
-            duration:0.5, 
-            y: -100 , 
+            duration:1, 
+            y: 100 , 
             opacity: 0,
             stagger:0.3
             }
         );
     tl.from('.people-row2 .person', {
             duration:1, 
-            y: -150 , 
+            y: 100 , 
             opacity: 0,
             stagger:0.3
             },
         );
     
     const scene = new ScrollMagic.Scene({
-            triggerElement: ".people",
+            triggerElement: ".people-row1",
             triggerHook: "onEnter",
             duration: "100%"
     })
-    .setPin(".people-row1")
-    .setPin(".people-row2")
     .setTween(tl)
     .addTo(controller);  
+    
+}
+
+function aboutPageSlideCareerSection(){
+
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.to-careers .career-link a',{ duration:1, y:100 ,opacity:0 });
+    tl.from('.to-careers .career-req',{ duration:1, y:100 ,opacity:0 });
+    
+    const scene = new ScrollMagic.Scene({
+            triggerElement: ".career-box",
+            triggerHook: "onEnter",
+            duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller);
     
 }
 
@@ -203,25 +229,21 @@ function aboutPageSlideCommunitySection(){
     const controller = new ScrollMagic.Controller();
     
     tl.from('#community_center', {duration:1, xPercent: 100 , opacity: 0});
-    // tl.from('#about_3', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_4', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_2', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_10', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_5', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_9', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#about_8', {duration:0.5, xPercent: 100 , opacity: 0});
-    // tl.from('#abt-btn',{ duration:0.5, y:100 ,opacity:0 });
-    // tl.from('.second-part .video-section',{ duration:0.5, y:100 ,opacity:0 });
+    tl.from('.community2', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    tl.from('.community3', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    tl.from('.community5', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    tl.from('.community6', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    tl.from('.community7', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    tl.from('.community8', {duration:0.5, xPercent: 100 , opacity: 0},"+=0.5");
+    
     
     const scene = new ScrollMagic.Scene({
-            triggerElement: ".community",
+            triggerElement: ".community .small-heading",
             triggerHook: "onEnter",
             duration: "100%"
     })
-    .setPin("#community_center")
     .setTween(tl)
-    .addTo(controller);
-    
+    .addTo(controller); 
 }
 
 var master = gsap.timeline();//homepage 
@@ -235,7 +257,9 @@ var about = gsap.timeline();//about page
 about.add( preloader() )//preloader
      .add( aboutPage() )//about page
      .add( chatBtn() )//chatbtn function
-     .add(aboutPageSlideBannerNextSection())//banner next section
+     .add(aboutPageSlideBannerNextSectionFirstPart())//banner next section
+     .add(aboutPageSlideBannerNextSectionSecondPart())//banner second part
      .add(aboutPageSlideValuesSection()) //values section
      .add(aboutPageSlidePeopleSection())//people section
+     .add(aboutPageSlideCareerSection())//career section
      .add(aboutPageSlideCommunitySection())//community section

@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
       right: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(270deg, #f6d31480, #11b1a2ab);
+      background: linear-gradient(270deg, #f6d314cf, #11b1a2db);
       background-size: 400% 400%;
       -webkit-animation: AnimationName 60s ease infinite;
       -moz-animation: AnimationName 60s ease infinite;
@@ -307,46 +307,40 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 100px; }
   .banner-next-section .center-img {
     position: relative; }
-    .banner-next-section .center-img img {
-      position: absolute;
-      left: 0;
-      top: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important; }
   .banner-next-section .surrounded-img img {
     position: absolute; }
   .banner-next-section .about4 {
-    bottom: -60px;
+    top: -70px;
     left: -40px; }
   .banner-next-section .about3 {
-    bottom: 0px;
+    top: -70px;
     left: -35px; }
   .banner-next-section .about2 {
-    top: 100px;
+    bottom: -175px;
     left: -40px; }
   .banner-next-section .about10 {
-    top: -270px;
+    top: -45px;
     right: -120px; }
   .banner-next-section .about5 {
-    top: 100px;
-    right: -40px; }
+    bottom: -100px;
+    right: -50px; }
   .banner-next-section .about9 {
-    top: -135px;
+    bottom: -135px;
     right: 0px; }
   .banner-next-section .about8 {
-    bottom: 170px;
+    top: -60px;
     right: 140px; }
 
 .second-part {
   padding-top: 175px; }
-  .second-part video {
+  .second-part img {
     width: 100%;
     border-radius: 6px;
     position: relative; }
   .second-part .side-box {
     background: #11b1a1;
     position: absolute;
-    top: 25px;
+    top: 55px;
     right: -140px;
     border-radius: 6px;
     display: flex;
@@ -354,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     max-width: 300px;
-    padding: 15px; }
+    padding: 30px; }
     .second-part .side-box h2 {
       text-align: center; }
 
@@ -385,8 +379,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent; }
 
 .people {
-  padding: 0px 0px 80px 0px;
-  margin-bottom: 100px; }
+  padding: 0px 0px 80px 0px; }
   .people h3 {
     background: -webkit-linear-gradient(#f6d314, #11b1a2);
     background-clip: border-box;
@@ -394,8 +387,10 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent; }
   .people .person-img {
     max-width: 200px;
+    height: 200px;
     background: linear-gradient(135deg, #11b1a1 0%, #ff920a 100%); }
     .people .person-img img {
+      height: 100%;
       width: 100%; }
     .people .person-img:before {
       content: ''; }
@@ -414,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
       color: #f6d314; }
 
 .to-careers {
-  padding: 120px 0px 80px 0px; }
+  padding: 80px 0px; }
   .to-careers .career-box {
     background: url("../images/globe.png") 100% no-repeat, -webkit-linear-gradient(-190deg, #6000bf 3%, #450194);
     background-size: auto, auto;
@@ -437,28 +432,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 100px; }
   .community .center-img {
     position: relative; }
-    .community .center-img img {
-      position: absolute;
-      left: 0 !important;
-      top: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important; }
   .community .surrounded-img img {
     position: absolute; }
   .community .community3 {
-    top: 0px;
+    bottom: -70px;
     left: -30px; }
   .community .community2 {
-    top: 0px;
+    bottom: -28px;
     left: -20px; }
   .community .community5 {
-    bottom: 100px;
+    top: 40px;
     left: -20px; }
   .community .community6 {
-    top: 200px;
+    bottom: -110px;
     left: 175px; }
   .community .community7 {
-    bottom: -325px;
+    top: -60px;
     right: -120px; }
   .community .community8 {
     top: 0px;
