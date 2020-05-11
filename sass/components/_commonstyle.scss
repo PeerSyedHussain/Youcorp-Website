@@ -147,3 +147,114 @@ body{
     min-height: 0px !important;
     height: 0px !important;
 }
+
+.contact-us{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(17,177,161,1) 0%, rgba(246,212,20,1) 100%);
+    
+    .contact-close-btn{
+        position: fixed;
+        background: #000;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        z-index: 9000;
+        right: 25px;
+        top: 25px;
+        background-color: #000;
+        background-image: linear-gradient(45deg,#000 45%,#333);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$left",endColorstr="$right",GradientType=1);
+        background-size: 200% 100%;
+        background-position: 100%;
+        box-shadow: 0 17px 19px -10px rgba(0,0,0,.5);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        padding: 20px;
+        
+        
+        img{
+            position: absolute;
+            left: 14px;
+            top: 12px;
+        }
+        
+        &:hover{
+            box-shadow: 0 6px 19px -5px rgba(0,0,0,.8);
+        }
+    }
+    label{
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        .required-mark{
+            color: $white;
+        }
+    }
+    input,textarea{
+        width: 100%;
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 0;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        border-radius: 6px;
+        &:hover{
+            background: #f1f1f1;
+        }
+        &:focus{
+            outline: 2px solid $logo-secondary-color;
+        }
+    }
+    h1{
+        color: $white !important;
+    }
+    .contact-send-btn{
+        background-color: #02c39d;
+        background-image: linear-gradient(45deg,#02c39d 45%,#4dd1d4);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$left",endColorstr="$right",GradientType=1);
+        background-size: 200% 100%;
+        background-position: 100%;
+        box-shadow: 0 17px 19px -10px rgba(0,255,198,.5);
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        padding: 15px 60px 15px 25px;
+        display: inline-block;
+        position: relative;
+        line-height: 30px;
+        border: none;
+        color: #fff;
+        
+        img{
+            position: absolute;
+            right: 25px;
+            height: auto;
+            width: 24px;
+            top: 50%;
+            margin-top: -10px;
+        }
+        &:hover{
+            box-shadow: 0 6px 19px -5px rgba(0,255,198,.8);
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+            background-position: 0;
+        }
+    }
+    .sidebar{
+        p{
+            color:$white;
+            font-weight: 900;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            &:hover{
+                color: #00ffc6;
+            }
+        }
+    }
+}

@@ -37,6 +37,12 @@ function chatBtn(){
 function homePage(){
     var t1 = gsap.timeline();
     
+    t1.to(".contact-us",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
     t1.from("#home_page",
         {
             delay:5,
@@ -54,6 +60,12 @@ function homePage(){
 function aboutPage(){
     var t1 = gsap.timeline();
     
+    t1.to(".contact-us",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
     t1.from(".about-us",
         {
             delay:5,
@@ -245,6 +257,109 @@ function aboutPageSlideCommunitySection(){
     .setTween(tl)
     .addTo(controller); 
 }
+
+$('.chat-btn .chat').click(function abtcontactUs(e){
+    e.preventDefault();
+    var t1 = gsap.timeline();
+    
+    $('.about-us').hide();
+    $('.banner-next-section').hide();
+    $('.values').hide();
+    $('.people').hide();
+    $('.to-careers').hide();
+    $('.community').hide();
+    $('.chat-btn .chat').hide();
+    t1.fromTo(".contact-us",
+        {
+            display:"none",
+            opacity:0,
+            yPercent:100,
+        }, 
+        {
+            duration:1,
+            yPercent:0,
+            opacity: 1,
+            display:"block"
+        }
+    )
+    t1.from(".abt-contact-x",{
+        duration:0.1,
+        yPercent:-100,
+        opacity:0  
+    })
+})
+
+
+
+$('.contact-close-btn').click(function abtcontactUsClose(e){
+    e.preventDefault();
+    
+    var t1 = gsap.timeline();
+    $('.chat-btn .chat').show();
+    $('.about-us').show();
+    $('.banner-next-section').show();
+    $('.values').show();
+    $('.people').show();
+    $('.to-careers').show();
+    $('.community').show();
+   
+    t1.to('.contact-us',{
+
+        yPercent:100,
+        opacity:0,
+        display:"none"
+    })   
+})
+
+$('.contact-close-btn').click(function homecontactUsClose(e){
+    e.preventDefault();
+    
+    var t1 = gsap.timeline();
+    $('.chat-btn .chat').show();
+    $('#home_page').show();
+   
+    t1.to('.contact-us',{
+
+        yPercent:100,
+        opacity:0,
+        display:"none"
+    })   
+})
+
+$('.home-nav-link-contactUs').click(function(){
+    $('.chat-btn .chat').click();
+})
+
+$('.chat-btn .chat').click(function homecontactUs(e){
+    e.preventDefault();
+    var t1 = gsap.timeline();
+     
+    $('#home_page').hide();
+    $('.chat-btn .chat').hide();
+    t1.fromTo(".contact-us",
+        {
+            display:"none",
+            opacity:0,
+            yPercent:100,
+        }, 
+        {
+            duration:1,
+            yPercent:0,
+            opacity: 1,
+            display:"block"
+        }
+    )
+    t1.from(".home-contact-x",{
+        duration:0.1,
+        yPercent:-100,
+        opacity:0  
+    })
+})
+
+
+
+
+
 
 var master = gsap.timeline();//homepage 
 
