@@ -1,10 +1,10 @@
 // about page scss
-.about-us{
+.about-us,.work-page-banner{
     height: 100vh;
     .navbar{
         z-index:100;
     }
-    .about-banner{
+    .about-banner,.work-banner{
         
         .overlay{
             position: absolute;
@@ -12,7 +12,7 @@
             top: 0;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(to right, #11b1a19c 0%, #f6d414c4 100%);
+            background: linear-gradient(to right, #11b1a1cc 0%, #f6d414f0 100%);
             z-index: 60;
             &:before{
                 content: '';
@@ -31,10 +31,10 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             video{
                 width: 100%;
-                height: 100vh;
+                height: 100%;
             }
         }
     }

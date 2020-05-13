@@ -1,7 +1,7 @@
 //   using gsap timeline
 
 
-function preloader(){
+function preloader(){//For Display Preloader
     var t1 = gsap.timeline();
 
     t1.to("#preloader_logo",
@@ -18,9 +18,9 @@ function preloader(){
                 opacity: 0
             }
         ) 
-}
+    }
 
-function chatBtn(){
+function chatBtn(){                         //For display Chat button
     var tl = gsap.timeline();
 
     tl.fromTo(".chat-btn",
@@ -34,7 +34,7 @@ function chatBtn(){
     )
 }
 
-function homePage(){
+function homePage(){                       //Home Page Functions
     var t1 = gsap.timeline();
     
     t1.to(".contact-us",
@@ -57,7 +57,7 @@ function homePage(){
     })
 }
 
-function aboutPage(){
+function aboutPage(){                                     //About Page functions
     var t1 = gsap.timeline();
     
     t1.to(".contact-us",
@@ -106,7 +106,46 @@ function aboutPage(){
     )
 }
 
-function aboutPageSlideBannerNextSectionFirstPart(){
+function workPage(){                       //work Page Functions
+    var t1 = gsap.timeline();
+    
+    t1.to(".contact-us",
+        {
+            opacity:0,
+            display:"none",
+        }
+    )
+    t1.from(".work-page-banner",
+        {
+            delay:5,
+            opacity:0,
+            display:"none",
+            yPercent: -100  
+        }
+    )
+    t1.from(".vision-values",
+    {
+        opacity:0,
+        display:"none",
+    })
+    t1.from(".plan-types",
+    {
+        opacity:0,
+        display:"none",
+    })
+    t1.from(".partners",
+    {
+        opacity:0,
+        display:"none",
+    })
+    t1.from(".ready-to-change",
+    {
+        opacity:0,
+        display:"none",
+    })
+}
+
+function aboutPageSlideBannerNextSectionFirstPart(){                     //abt page Banner next section function firstpart
 
     var tl = new TimelineMax();
         
@@ -133,7 +172,7 @@ function aboutPageSlideBannerNextSectionFirstPart(){
     
 }
 
-function aboutPageSlideBannerNextSectionSecondPart(){
+function aboutPageSlideBannerNextSectionSecondPart(){                  //abt page Banner next section function secondpart...
 
     var tl = new TimelineMax();
         
@@ -152,7 +191,7 @@ function aboutPageSlideBannerNextSectionSecondPart(){
     
 }
 
-function aboutPageSlideValuesSection(){
+function aboutPageSlideValuesSection(){                          //abt page Values function
 
     var tl = new TimelineMax();
         
@@ -182,7 +221,7 @@ function aboutPageSlideValuesSection(){
     .addTo(controller);  
 }
 
-function aboutPageSlidePeopleSection(){
+function aboutPageSlidePeopleSection(){                  //abt page People function
 
     
     
@@ -215,7 +254,7 @@ function aboutPageSlidePeopleSection(){
     
 }
 
-function aboutPageSlideCareerSection(){
+function aboutPageSlideCareerSection(){                      //abt page Career function 
 
     var tl = new TimelineMax();
         
@@ -234,7 +273,7 @@ function aboutPageSlideCareerSection(){
     
 }
 
-function aboutPageSlideCommunitySection(){
+function aboutPageSlideCommunitySection(){                      //abt page Community function 
 
     var tl = new TimelineMax();
         
@@ -258,7 +297,88 @@ function aboutPageSlideCommunitySection(){
     .addTo(controller); 
 }
 
-$('.chat-btn .chat').click(function abtcontactUs(e){
+function visionValues(){                          //Vision & values function  
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('#work-btn', {
+        duration:1,
+        yPercent: 100 ,
+        opacity: 0
+    });
+    
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".vision-values",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller); 
+}
+
+
+function planTypes(){                          //Plantypes function
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.type-box', {
+        duration:1, 
+        opacity: 0,
+        stagger:0.3
+    });
+    
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".plan-types",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller); 
+}
+
+function partners(){                          //partners function
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.partner-logo-section', {
+        duration:1, 
+        opacity: 0,
+        yPercent:100
+    });
+    
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".partners",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller); 
+}
+
+function readyToChange(){                          //ready to change function
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('#getstarted-btn', {
+        duration:1, 
+        opacity: 0,
+        yPercent:100
+    });
+    
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".ready-to-change",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller); 
+}
+
+$('.chat-btn .chat').click(function abtcontactUs(e){   //onclick chat button in abt page
     e.preventDefault();
     var t1 = gsap.timeline();
     
@@ -289,9 +409,39 @@ $('.chat-btn .chat').click(function abtcontactUs(e){
     })
 })
 
+$('.chat-btn .chat').click(function workcontactUs(e){   //onclick chat button in Work page
+    e.preventDefault();
+    var t1 = gsap.timeline();
+    
+    $('.work-page-banner').hide();
+    $('.vision-values').hide();
+    $('.plan-types').hide();
+    $('.partners').hide();
+    $('.ready-to-change').hide();
+    $('.chat-btn .chat').hide();
+    t1.fromTo(".contact-us",
+        {
+            display:"none",
+            opacity:0,
+            yPercent:100,
+        }, 
+        {
+            duration:1,
+            yPercent:0,
+            opacity: 1,
+            display:"block"
+        }
+    )
+    t1.from(".work-contact-x",{
+        duration:0.1,
+        yPercent:-100,
+        opacity:0  
+    })
+})
 
 
-$('.contact-close-btn').click(function abtcontactUsClose(e){
+
+$('.contact-close-btn').click(function abtcontactUsClose(e){      //onclick chat close button in abt page
     e.preventDefault();
     
     var t1 = gsap.timeline();
@@ -311,7 +461,27 @@ $('.contact-close-btn').click(function abtcontactUsClose(e){
     })   
 })
 
-$('.contact-close-btn').click(function homecontactUsClose(e){
+
+$('.contact-close-btn').click(function workcontactUsClose(e){      //onclick chat close button in work page
+    e.preventDefault();
+    
+    var t1 = gsap.timeline();
+    $('.chat-btn .chat').show();
+    $('.work-page-banner').show();
+    $('.vision-values').show();
+    $('.plan-types').show();
+    $('.partners').show();
+    $('.ready-to-change').show();
+   
+    t1.to('.contact-us',{
+
+        yPercent:100,
+        opacity:0,
+        display:"none"
+    })   
+})
+
+$('.contact-close-btn').click(function homecontactUsClose(e){      //onclick chat close button in home page
     e.preventDefault();
     
     var t1 = gsap.timeline();
@@ -326,12 +496,12 @@ $('.contact-close-btn').click(function homecontactUsClose(e){
     })   
 })
 
-$('.home-nav-link-contactUs').click(function(){
+$('.home-nav-link-contactUs').click(function(){                     //onclick nav link contact us button in home page
     $('.chat-btn .chat').click();
 })
 
-$('.chat-btn .chat').click(function homecontactUs(e){
-    e.preventDefault();
+$('.chat-btn .chat').click(function homecontactUs(e){                          //onclick chat button in home page
+    e.preventDefault();        
     var t1 = gsap.timeline();
      
     $('#home_page').hide();
@@ -356,6 +526,39 @@ $('.chat-btn .chat').click(function homecontactUs(e){
     })
 })
 
+$(document).ready(function() {                          //Vision SLider FUnction
+    $(".vision").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:3000,
+        arrows:false,
+        // fade:true,
+        mobileFirst:true,
+        speed:500,
+        swipeToSlide:true,
+        draggable:false
+      });
+    
+      $(".friends-statement").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:3000,
+        arrows:false,
+        fade:true,
+        // mobileFirst:true,
+        speed:500,
+        // swipeToSlide:true,
+        // draggable:false
+      });
+});
+
+
 
 
 
@@ -364,17 +567,28 @@ $('.chat-btn .chat').click(function homecontactUs(e){
 var master = gsap.timeline();//homepage 
 
 master.add( preloader() )//preloader function
-      .add( homePage() )//homepage function
-      .add( chatBtn() )//chatbtn function
+      .add( homePage() )//homepage function onload function
+      .add( chatBtn() )//chatbtn show function 
 
 var about = gsap.timeline();//about page
 
 about.add( preloader() )//preloader
-     .add( aboutPage() )//about page
-     .add( chatBtn() )//chatbtn function
+     .add( aboutPage() )//about page onload function
+     .add( chatBtn() )//chatbtn show function 
      .add(aboutPageSlideBannerNextSectionFirstPart())//banner next section
      .add(aboutPageSlideBannerNextSectionSecondPart())//banner second part
      .add(aboutPageSlideValuesSection()) //values section
      .add(aboutPageSlidePeopleSection())//people section
      .add(aboutPageSlideCareerSection())//career section
      .add(aboutPageSlideCommunitySection())//community section
+
+
+var work = gsap.timeline();//work page
+
+work.add(preloader())//Preloader
+    .add(workPage())//work page onload function
+    .add( chatBtn() )//chatbtn show function 
+    .add(visionValues())//vision & values function
+    .add(planTypes())//Plantypes function
+    .add(partners)//partners function
+    .add(readyToChange())//ready to change function
