@@ -1,8 +1,8 @@
 
 
 .slick-slide {
-margin: 20px 20px;
-width: unset !important;
+// margin: 20px 20px;
+// width: unset !important;
 }
 
 .slick-slide img {
@@ -33,4 +33,26 @@ opacity: 1;
 }
 .vision-slide.slick-slide.slick-current.slick-active{
   background: linear-gradient(225deg, rgba(17,177,162,1) 70%, rgba(246,211,20,1) 100%) !important;
+  h4{
+    color: $white !important;
+  }
+  p{
+    color:$white;
+  }
+  svg{
+    color:$white;
+  }
+}
+
+
+.vision-slide.slick-slide{
+  svg{
+    color:$primary-color;
+  }
+}
+.friends-statement.slick-slide.slick-current.slick-active{
+   background-color: #000;
+   h4{
+     color:#fff;
+   }
 }

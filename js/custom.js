@@ -143,6 +143,11 @@ function workPage(){                       //work Page Functions
         opacity:0,
         display:"none",
     })
+    t1.from(".our-works",
+    {
+        opacity:0,
+        display:"none",
+    })
 }
 
 function aboutPageSlideBannerNextSectionFirstPart(){                     //abt page Banner next section function firstpart
@@ -338,6 +343,32 @@ function planTypes(){                          //Plantypes function
     .addTo(controller); 
 }
 
+function ourWorks(){                          //Our works section   
+    var tl = new TimelineMax();
+        
+    const controller = new ScrollMagic.Controller();
+    
+    tl.from('.our-works .work-row1', {
+        duration:1,
+        yPercent: 100 ,
+        opacity: 0
+    });
+    tl.from('.our-works .work-row2', {
+        duration:1,
+        yPercent: 100 ,
+        opacity: 0
+    });
+    
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".our-works .small-heading",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+    .setTween(tl)
+    .addTo(controller); 
+}
+
+
 function partners(){                          //partners function
     var tl = new TimelineMax();
         
@@ -348,10 +379,15 @@ function partners(){                          //partners function
         opacity: 0,
         yPercent:100
     });
+    tl.from('.friends-statement', {
+        duration:1, 
+        opacity: 0,
+        // yPercent:100,
+    });
     
     const scene = new ScrollMagic.Scene({
-        triggerElement: ".partners",
-        triggerHook: "onEnter",
+        triggerElement: ".our-works",
+        triggerHook: "onLeave",
         duration: "100%"
     })
     .setTween(tl)
@@ -539,7 +575,8 @@ $(document).ready(function() {                          //Vision SLider FUnction
         mobileFirst:true,
         speed:500,
         swipeToSlide:true,
-        draggable:false
+        draggable:false,
+        ltr:true,
       });
     
       $(".friends-statement").slick({
@@ -551,11 +588,10 @@ $(document).ready(function() {                          //Vision SLider FUnction
         autoplaySpeed:3000,
         arrows:false,
         fade:true,
-        // mobileFirst:true,
         speed:500,
-        // swipeToSlide:true,
-        // draggable:false
       });
+      
+      
 });
 
 
@@ -590,5 +626,6 @@ work.add(preloader())//Preloader
     .add( chatBtn() )//chatbtn show function 
     .add(visionValues())//vision & values function
     .add(planTypes())//Plantypes function
+    .add(ourWorks())//works section
     .add(partners)//partners function
     .add(readyToChange())//ready to change function
