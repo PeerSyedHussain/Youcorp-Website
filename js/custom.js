@@ -453,6 +453,7 @@ $('.chat-btn .chat').click(function workcontactUs(e){   //onclick chat button in
     $('.vision-values').hide();
     $('.plan-types').hide();
     $('.partners').hide();
+    $('.our-works').hide();
     $('.ready-to-change').hide();
     $('.chat-btn .chat').hide();
     t1.fromTo(".contact-us",
@@ -507,6 +508,7 @@ $('.contact-close-btn').click(function workcontactUsClose(e){      //onclick cha
     $('.vision-values').show();
     $('.plan-types').show();
     $('.partners').show();
+    $('.our-works').show();
     $('.ready-to-change').show();
    
     t1.to('.contact-us',{
