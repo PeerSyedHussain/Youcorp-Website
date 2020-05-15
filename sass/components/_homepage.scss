@@ -61,6 +61,43 @@
                     cursor:pointer;
                     z-index:11;
                     transform: translate(50%,-0%);
+                    @media (max-width: 1280px)  and (max-height: 720px) {
+                        transform: translate(100%,0%);
+                    }
+                    @media (max-width: 1280px)  and (max-height: 950px) {
+                        transform: translate(100%,0%);
+                    }
+                    @media(max-width: 993px){
+                        transform: translate(0%,100%);
+                    }
+                    @media(max-width: 769px){
+                        transform: translate(0%,50%);
+                    }
+                }
+            }
+            @media(max-width: 993px){
+                overflow: hidden;
+                &:before{
+                    background-image: url("../images/top-circle.png");   
+                    left: -300px;
+                    bottom: -325px;
+                    background-position: left;
+                    height: 100%;
+                }
+            }
+            @media(max-width: 769px){
+               
+                &:before{   
+                    left: -300px;
+                    bottom: -245px;
+                }
+            }
+            
+            @media(max-width: 480px){
+             
+                &:before{
+                    left: -130px;
+                    bottom: -150px;
                 }
             }
         }
@@ -82,6 +119,57 @@
             background-size: contain;
             z-index: 1;
         }
+        @media(max-width:3840px){
+            &:before{
+                right: 740px;
+            }
+        }
+        
+        @media(max-width:1920px){
+            &:before{
+                right: 375px;
+            }
+        }
+        @media(max-width:1440px){
+            &:before{
+                right: 260px;
+            }
+        }
+        @media(max-width:1370px){
+            &:before{
+                right: 290px;
+            }
+        }
+        @media (min-width:993px) and  (max-width: 1280px)  and (max-height: 800px) {
+            &:before{
+                right: 250px !important;
+            }
+        }
+        
+        @media (min-width:993px) and (max-width: 1280px)  and (max-height: 950px) {
+            &:before{
+                right: 190px;
+            }
+        }
+        @media(max-width: 993px){
+            height: 70vh;
+            &:before{
+                background-image: url("../images/mobileview/home-page-bottom-video.png");
+                right: 0;
+                bottom: 2px;
+                height: 70vh;
+            }
+        }
+        @media(max-width: 769px){
+            height: 60vh;
+            &:before{
+                background-image: url("../images/mobileview/home-page-bottom-video.png");
+                right: 0;
+                bottom: 2px;
+                height: 60vh;
+                left: -2px;
+            }
+        }
     }
 
     .top-circle{
@@ -91,6 +179,29 @@
         top: -250px;
         transition:all 0.5s infinite;
         transform:rotate(360deg);
+        
+        @media(max-width: 993px){
+            right: -190px;
+            top: -275px;
+            img{
+                position: relative;
+            }
+        }
+    }
+    .for-mobile-view-top{
+        display: none;
+        @media(max-width: 769px){
+            display: block;
+            position: absolute;
+            right: -50px;
+            top:-80px;
+        }
+    }
+    
+    .for-mobile-container{
+        @media(max-width: 993px){
+            margin-top: 75px;
+        }
     }
     
 }
