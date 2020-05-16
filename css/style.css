@@ -134,6 +134,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media (max-width: 575px) {
+      .contact-us .full-height {
+        height: unset; } }
   .contact-us .contact-close-btn {
     position: fixed;
     background: #000;
@@ -480,6 +483,13 @@ h1, h2, h3, h4, h5, h6 {
       height: 100%;
       background-repeat: no-repeat;
       background-position: bottom; }
+    @media (max-width: 834px) {
+      .about-us .about-banner .overlay, .about-us .work-banner .overlay, .work-page-banner .about-banner .overlay, .work-page-banner .work-banner .overlay {
+        height: 50vh; } }
+    @media (max-width: 575px) {
+      .about-us .about-banner .overlay, .about-us .work-banner .overlay, .work-page-banner .about-banner .overlay, .work-page-banner .work-banner .overlay {
+        height: 30vh;
+        left: -1px; } }
   .about-us .about-banner .video, .about-us .work-banner .video, .work-page-banner .about-banner .video, .work-page-banner .work-banner .video {
     position: absolute;
     left: 0;
@@ -489,6 +499,18 @@ h1, h2, h3, h4, h5, h6 {
     .about-us .about-banner .video video, .about-us .work-banner .video video, .work-page-banner .about-banner .video video, .work-page-banner .work-banner .video video {
       width: 100%;
       height: 100%; }
+    @media (max-width: 834px) {
+      .about-us .about-banner .video, .about-us .work-banner .video, .work-page-banner .about-banner .video, .work-page-banner .work-banner .video {
+        height: 50vh; } }
+    @media (max-width: 575px) {
+      .about-us .about-banner .video, .about-us .work-banner .video, .work-page-banner .about-banner .video, .work-page-banner .work-banner .video {
+        height: 30vh; } }
+  @media (max-width: 834px) {
+    .about-us, .work-page-banner {
+      height: 50vh; } }
+  @media (max-width: 575px) {
+    .about-us, .work-page-banner {
+      height: 30vh; } }
 
 .banner-next-section {
   background: url("../images/careers-top-bottom.svg") bottom no-repeat, linear-gradient(-180deg, #fff, #f1f1f1);
@@ -521,6 +543,16 @@ h1, h2, h3, h4, h5, h6 {
   .banner-next-section .about8 {
     top: -60px;
     right: 140px; }
+  @media (max-width: 834px) {
+    .banner-next-section .for-mob-view {
+      display: none; } }
+  @media (max-width: 834px) {
+    .banner-next-section {
+      padding-bottom: 350px; } }
+  @media (max-width: 575px) {
+    .banner-next-section {
+      padding-top: 50px;
+      padding-bottom: 455px; } }
 
 .second-part {
   padding-top: 175px; }
@@ -542,6 +574,32 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px; }
     .second-part .side-box h2 {
       text-align: center; }
+    @media (max-width: 834px) {
+      .second-part .side-box {
+        top: 200px;
+        left: 25%; } }
+    @media (max-width: 575px) {
+      .second-part .side-box {
+        top: 150px;
+        right: 20px;
+        max-width: 250px; }
+        .second-part .side-box h2 {
+          font-size: 24px; } }
+    @media (max-width: 414px) {
+      .second-part .side-box {
+        left: 68px; } }
+    @media (max-width: 375px) {
+      .second-part .side-box {
+        left: 48px; } }
+    @media (max-width: 320px) {
+      .second-part .side-box {
+        left: 20px; } }
+  @media (max-width: 834px) {
+    .second-part {
+      padding-top: 100px; } }
+  @media (max-width: 575px) {
+    .second-part {
+      padding-top: 50px; } }
 
 .values {
   position: relative;
@@ -550,8 +608,33 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 145px;
     top: -150px; }
+    @media (max-width: 3840px) {
+      .values .container {
+        left: 35%; } }
+    @media (max-width: 1920px) {
+      .values .container {
+        left: 22%; } }
+    @media (max-width: 1440px) {
+      .values .container {
+        left: 12%; } }
+    @media (max-width: 1280px) {
+      .values .container {
+        left: 5%; } }
+    @media (max-width: 834px) {
+      .values .container {
+        left: 50px; } }
+    @media (max-width: 768px) {
+      .values .container {
+        left: 26px; } }
+    @media (max-width: 575px) {
+      .values .container {
+        left: 0;
+        top: -110px; } }
   .values .total-box {
     display: flex; }
+    @media (max-width: 575px) {
+      .values .total-box {
+        display: unset; } }
   .values .boxes {
     background-color: #fff;
     border-radius: 6px;
@@ -563,11 +646,24 @@ h1, h2, h3, h4, h5, h6 {
     .values .boxes:hover {
       transform: translateY(-10px);
       box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.27); }
+    @media (max-width: 575px) {
+      .values .boxes {
+        margin: 10px 10px; } }
   .values h2 {
     background: -webkit-linear-gradient(#f6d314, #11b1a2);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+  @media (max-width: 575px) {
+    .values .for-mobile-view-valuebox {
+      display: flex;
+      justify-content: center; } }
+  @media (min-width: 1920px) {
+    .values {
+      height: 25%; } }
+  @media (min-width: 576px) and (max-width: 1920px) {
+    .values {
+      height: 50%; } }
 
 .people {
   padding: 0px 0px 80px 0px; }
@@ -598,6 +694,11 @@ h1, h2, h3, h4, h5, h6 {
       color: #000000; }
     .people .person-details .mail {
       color: #f6d314; }
+  @media (max-width: 575px) {
+    .people {
+      padding-top: 800px; }
+      .people .person {
+        margin: 15px; } }
 
 .to-careers {
   padding: 80px 0px; }
@@ -618,6 +719,9 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: -35px;
     left: 40px; }
+  @media (max-width: 575px) {
+    .to-careers {
+      padding: 0px; } }
 
 .community {
   padding-top: 100px; }
@@ -643,6 +747,9 @@ h1, h2, h3, h4, h5, h6 {
   .community .community8 {
     top: 0px;
     right: 0px; }
+  @media (max-width: 834px) {
+    .community .for-mob-view {
+      display: none; } }
 
 #work_page .vision-values {
   margin: 60px 0px; }

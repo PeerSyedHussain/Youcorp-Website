@@ -158,6 +158,9 @@ body{
         display: flex ;
         flex-direction: column;
         justify-content: center;
+        @media(max-width:575px){
+            height: unset;
+        }
     }
     .contact-close-btn{
         position: fixed;

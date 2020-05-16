@@ -25,6 +25,13 @@
                 background-repeat: no-repeat;
                 background-position: bottom;
             }
+            @media(max-width: 834px){
+                height: 50vh;
+            }
+            @media(max-width: 575px){
+                height: 30vh;
+                left: -1px;
+            }
         }
         .video{
             position: absolute;
@@ -36,7 +43,19 @@
                 width: 100%;
                 height: 100%;
             }
+            @media(max-width: 834px){
+                height: 50vh;
+            }
+            @media(max-width: 575px){
+                height: 30vh;
+            }
         }
+    }
+    @media(max-width: 834px){
+        height: 50vh;
+    }
+    @media(max-width: 575px){
+        height: 30vh;
     }
 }
 
@@ -82,6 +101,20 @@
         top: -60px;
         right: 140px;
     }
+    
+    .for-mob-view{
+        @media(max-width: 834px){
+            display: none;
+        }
+    }
+    @media(max-width: 834px){
+        padding-bottom: 350px;
+    }
+    
+    @media(max-width: 575px){
+        padding-top: 50px;
+        padding-bottom: 455px;
+    }
 }
 
 .second-part{
@@ -107,6 +140,34 @@
         h2{
             text-align:center;
         }
+        @media(max-width:834px){
+            top:200px;
+            left:25%;
+        }
+       
+        @media(max-width: 575px){
+            top:150px;
+            right: 20px;
+            max-width: 250px;
+            h2{
+               font-size: 24px;
+            }
+        }
+        @media(max-width: 414px){
+            left:68px;
+        }
+        @media(max-width: 375px){
+            left:48px;
+        }
+        @media(max-width: 320px){
+            left:20px;
+        }
+    }
+    @media(max-width: 834px){
+        padding-top: 100px;
+    }
+    @media(max-width: 575px){
+        padding-top: 50px;
     }
 }
 
@@ -117,9 +178,34 @@
         position: absolute;
         left: 145px;
         top: -150px;
+        @media(max-width:3840px){
+            left: 35%;
+        }
+        @media(max-width:1920px){
+            left: 22%;
+        }
+        @media(max-width:1440px){
+            left: 12%;
+        }
+        @media(max-width:1280px){
+            left: 5%;
+        }
+        @media(max-width: 834px){
+            left: 50px;
+        }
+        @media(max-width: 768px){
+            left: 26px;
+        }
+        @media(max-width: 575px){
+            left: 0;
+            top:-110px;
+        }
     }
     .total-box{
         display:flex;
+        @media(max-width: 575px){
+            display: unset;
+        }
     }
     .boxes{
         background-color: $white;
@@ -134,12 +220,27 @@
             transform:translateY(-10px);
             box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.27);
         }
+        @media(max-width: 575px){
+           margin: 10px 10px;
+        }
     }
     h2{
         background: -webkit-linear-gradient($logo-primary-color,$logo-secondary-color);
         background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+    .for-mobile-view-valuebox{
+        @media(max-width: 575px){
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media(min-width: 1920px){
+        height: 25%;
+    }
+    @media(min-width: 576px) and (max-width:1920px){
+        height: 50%;
     }
 }
 
@@ -180,6 +281,13 @@
             color:$logo-primary-color;
         }
     }
+    @media(max-width: 575px){
+        padding-top: 800px;
+        
+        .person{
+            margin:15px;
+        }
+    }
 }
 
 .to-careers{
@@ -204,6 +312,9 @@
         position: absolute;
         bottom: -35px;
         left: 40px;
+    }
+    @media(max-width: 575px){
+        padding: 0px;
     }
 }
 
@@ -240,5 +351,10 @@
     .community8{
         top: 0px;
         right: 0px;
+    }
+    @media(max-width: 834px){
+        .for-mob-view{
+            display: none;
+        }
     }
 }
