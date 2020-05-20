@@ -314,11 +314,12 @@ function visionValues(){                          //Vision & values function
     });
     
     const scene = new ScrollMagic.Scene({
-        triggerElement: ".vision-values",
-        triggerHook: "onEnter",
-        duration: "100%"
+        triggerElement: ".vision-values .contents",
+        triggerHook: "0.5",
+        duration: "20%"
     })
     .setTween(tl)
+    // .addIndicators()
     .addTo(controller); 
 }
 
@@ -331,16 +332,18 @@ function planTypes(){                          //Plantypes function
     tl.from('.type-box', {
         duration:1, 
         opacity: 0,
-        stagger:0.3
+        stagger:0.3,
     });
     
     const scene = new ScrollMagic.Scene({
         triggerElement: ".plan-types",
-        triggerHook: "onEnter",
-        duration: "100%"
+        triggerHook: "0.5",
+        duration: "50%"
     })
     .setTween(tl)
+    // .addIndicators()
     .addTo(controller); 
+    
 }
 
 function ourWorks(){                          //Our works section   
@@ -350,21 +353,22 @@ function ourWorks(){                          //Our works section
     
     tl.from('.our-works .work-row1', {
         duration:1,
-        yPercent: 100 ,
+        y: 100 ,
         opacity: 0
     });
     tl.from('.our-works .work-row2', {
         duration:1,
-        yPercent: 100 ,
+        y: 100 ,
         opacity: 0
     });
     
     const scene = new ScrollMagic.Scene({
         triggerElement: ".our-works .small-heading",
-        triggerHook: "onEnter",
+        triggerHook: "0.5",
         duration: "100%"
     })
     .setTween(tl)
+    // .addIndicators()
     .addTo(controller); 
 }
 
@@ -374,23 +378,24 @@ function partners(){                          //partners function
         
     const controller = new ScrollMagic.Controller();
     
+   
+    tl.from('.friends-statement', {
+        duration:0.1, 
+        opacity: 0,
+        // y:100,
+    });
     tl.from('.partner-logo-section', {
         duration:1, 
         opacity: 0,
-        yPercent:100
+        y:100
     });
-    tl.from('.friends-statement', {
-        duration:1, 
-        opacity: 0,
-        // yPercent:100,
-    });
-    
     const scene = new ScrollMagic.Scene({
-        triggerElement: ".our-works",
-        triggerHook: "onLeave",
+        triggerElement: ".partners",
+        triggerHook: "0.5",
         duration: "100%"
     })
     .setTween(tl)
+    // .addIndicators()
     .addTo(controller); 
 }
 
@@ -407,10 +412,11 @@ function readyToChange(){                          //ready to change function
     
     const scene = new ScrollMagic.Scene({
         triggerElement: ".ready-to-change",
-        triggerHook: "onEnter",
+        triggerHook: "0.8",
         duration: "100%"
     })
     .setTween(tl)
+    // .addIndicators()
     .addTo(controller); 
 }
 
@@ -475,7 +481,6 @@ $('.chat-btn .chat').click(function workcontactUs(e){   //onclick chat button in
         opacity:0  
     })
 })
-
 
 
 $('.contact-close-btn').click(function abtcontactUsClose(e){      //onclick chat close button in abt page
@@ -579,6 +584,7 @@ $(document).ready(function() {                          //Vision SLider FUnction
         swipeToSlide:true,
         draggable:false,
         ltr:true,
+    
       });
     
       $(".friends-statement").slick({

@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
 }
-body{
+html,body{
     overflow-x:hidden;
 }
 // Preloader styles
@@ -142,11 +142,11 @@ body{
     }
 }
 
-.scrollmagic-pin-spacer{
-    padding-top: 0px !important;
-    min-height: 0px !important;
-    height: 0px !important;
-}
+// .scrollmagic-pin-spacer{
+//     padding-top: 0px !important;
+//     min-height: 0px !important;
+//     height: 0px !important;
+// }
 
 .contact-us{
     width: 100%;
